@@ -1,10 +1,11 @@
-const CACHE = 'martinex-v1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest'];
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
-  self.skipWaiting();
-});
-self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
-self.addEventListener('fetch', event => {
-  event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request)));
-});
+{
+  "name": "MARTINEX V2.2",
+  "short_name": "Martinex",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "description": "Martinex V2.2 — Finance without borders.",
+  "icons": []
+}
